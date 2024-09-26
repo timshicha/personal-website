@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import HomeImg from '../assets/home-img.png';
-import HamburgerMenuImg from '../assets/hamburger-menu.png';
-import '../styles/Navbar.css';
+import HomeImg from '/src/assets/home-img.png';
+import HamburgerMenuImg from '/src/assets/hamburger-menu.png';
+import '/src/styles/Navbar.css';
 
 const Navbar = () => {
   const [menuExpanded, setMenuExpanded] = useState(false);
