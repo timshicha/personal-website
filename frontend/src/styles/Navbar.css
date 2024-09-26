@@ -1,7 +1,8 @@
 .nav-bar {
   position: fixed;
-  background-color: rgb(101, 87, 129);
-  background-image: linear-gradient(rgb(74, 46, 119), rgb(102, 85, 135));
+  left: 0;
+  top: 0;
+  background-image: linear-gradient(rgb(0, 0, 0), rgb(50, 50, 50));
   height: 50px;
   width: 100%;
   z-index: 1;
@@ -50,7 +51,7 @@
 }
 
 .expanded-menu {
-  background-color: rgb(102, 85, 135);
+  background-color: rgb(50, 50, 50);
   margin: 0px;
   height: 230px;
   overflow-y: hidden;
