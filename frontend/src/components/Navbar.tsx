@@ -7,6 +7,13 @@ import '/src/styles/Navbar.css';
 const Navbar = () => {
   const [menuExpanded, setMenuExpanded] = useState(false);
 
+  const NavItems = [
+    "Work",
+    "Projects",
+    "Hobbies",
+    "Faith"
+  ];
+
   return (
     <nav className="nav-bar">
       <Link to="/" className="home-button">
@@ -15,22 +22,22 @@ const Navbar = () => {
       <div className="nav-table">
         <div className="nav-item">
           <Link to="/" className="nav-link about-me-link">
-            About Me
+            {NavItems[0]}
           </Link>
         </div>
         <div className="nav-item">
           <Link to="/previous-work" className="nav-link previous-work-link">
-            Previous Work
+            {NavItems[1]}
           </Link>
         </div>
         <div className="nav-item">
           <Link to="/projects" className="nav-link projects-link">
-            Projects
+            {NavItems[2]}
           </Link>
         </div>
         <div className="nav-item">
-          <Link to="/contact" className="nav-link contact-link">
-            Contact
+          <Link to="/projects" className="nav-link projects-link">
+            {NavItems[3]}
           </Link>
         </div>
       </div>
@@ -50,22 +57,22 @@ const Navbar = () => {
         <ul className={'expanded-menu ' + (menuExpanded ? '' : 'hidden')}>
           <li className="menu-item">
             <Link to="/" className="menu-link">
-              About Me
+              {NavItems[0]}
             </Link>
           </li>
           <li className="menu-item">
             <Link to="/previous-work" className="menu-link">
-              Previous Work
+              {NavItems[1]}
             </Link>
           </li>
           <li className="menu-item">
             <Link to="/projects" className="menu-link">
-              Projects
+            {NavItems[2]}
             </Link>
           </li>
           <li className="menu-item">
-            <Link to="/contact" className="menu-link">
-              Contact
+            <Link to="/projects" className="menu-link">
+            {NavItems[3]}
             </Link>
           </li>
         </ul>
