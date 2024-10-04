@@ -124,6 +124,10 @@
   width: 110px;
 }
 
+.navbar-spacer {
+  height: 50px;
+}
+
 @media (max-width: 570px) {
   .nav-table {
     display: none;
