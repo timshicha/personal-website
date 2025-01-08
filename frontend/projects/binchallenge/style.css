@@ -15,6 +15,10 @@ body {
 }
 
 #binDrawingImg {
+    width: 50%;
+}
+
+#holdingBinImg {
     width: 40%;
 }
 
