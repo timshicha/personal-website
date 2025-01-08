@@ -118,11 +118,28 @@
         <img src="./assets/level.jpeg" id="levelImg" alt="Angle sensor level in a plastic container.">
         <h3>Programming the microcontroller</h3>
         <p>
-            I programmed the microcontroller to read the output values of the angle sensors and store
-            them. This process is repeated 20 times per second. I programmed the microcontroller to
+            I programmed the microcontroller to allow devices to connect to it through WiFi. The
+            microcontroller repratedly reads the output values of the angle sensors and stores
+            them. This process is done 20 times per second. I then programmed the microcontroller to
             have two endpoints that send the recorded sensor values: one for the upper arm angle, and
             one for the lower arm angle. Devices that are connected to the microcontroller through WiFi
             can send requests to these endpoints and receive the angle sensor values.
+        </p>
+        <h3>Fetching and converting data in the app</h3>
+        <p>
+            The app fetches the angle sensor data from the endpoints 20 times per second. This data is
+            then converted from a 0 - 4095 value to an angle. This angle data is used to display the
+            arm on the stick figure and to determine whether the user dropped (or raised) their arm
+            too far.
+        </p>
+        <h3>Allowing to "zero" the sensors</h3>
+        <p>
+            When testing my system, I instantly noticed a problem. When I would hold my arm out
+            straight, the app showed that my arm was not near 0 degrees, but closer to 10 - 15
+            degrees. The reason for this is the levels being attached to the top surface of the
+            arm, and the outside of the arm has a natural bend to it. So, I implemented a "zero"
+            functionality in the app, similar to what you might see on a cooking scale. This
+            solution worked very well.
         </p>
     </body>
 </html>
