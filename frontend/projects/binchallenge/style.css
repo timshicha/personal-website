@@ -1,0 +1,48 @@
+body {
+    max-width: 800px;
+}
+
+.center {
+    text-align: center;
+}
+
+#esp32img {
+    width: 70%;
+}
+
+#screenshotBasicImg {
+    width: 24%;
+}
+
+#binDrawingImg {
+    width: 40%;
+}
+
+#microcontrollerImg {
+    width: 40%;
+}
+
+#angleSensorImg {
+    border: 2px gray solid;
+    width: 40%;
+}
+
+#leverImg {
+    width: 40%;
+}
+
+#leverDownImg {
+    width: 52%;
+}
+
+#levelImg {
+    width: 40%;
+}
+
+h3 {
+    margin-top: 30px;
+}
+
+a::after {
+    content: '';
+}

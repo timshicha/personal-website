@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+
+<html lang="en-US">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Bin Challenge</title>
+        <link rel="stylesheet" href="./style.css">
+        <meta name="viewport" content="width=device-width" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+    </head>
+    <body>
+        <p><i>*This is a temporary site that I made to urgently display my projects.</i></p>
+        <a href="../">Back to projects</a>
+
+        <h1 class="center">Bin Challenge</h1>
+        <p>Timofey Shichalin</p>
+        <p>Project date: October 2024</p>
+        <br>
+        <h2>30-Second Summary</h2>
+        <p>Bin Challenge is a system that allows users to track the angles
+            of their upper and lower arm. The project consists of 2 parts:
+        </p>
+        <ul>
+            <li>The physical system consisting of:
+                <ul>
+                    <li>A lightweight microcontroller</li>
+                    <li>Two angle measuring modules</li>
+                </ul>
+            </li>
+            <li>The iPhone app</li>
+        </ul>
+        <div>
+            <img src="./assets/esp32system.jpeg" id="esp32img" alt="Wired system consisting a microcontroller and two angle sensors in plastic containers.">
+            <img src="./assets/screenshotBasic.jpeg" id="screenshotBasicImg" alt="Screenshot of an iPhone app of a stick-figure with a limb that shows the angles.">
+        </div>
+        <p>
+            The physical system is attached to an arm and measures the angle at which the
+            sensors are tilted. The app then fetches this data from the microcontroller via
+            WiFi and uses it to display the arm in the app.
+        </p>
+        <p>
+            <i>
+            To better understand how the microcontroller and the app work together, see a more
+            detailed overview of the project below.
+            </i>
+        </p>
+        
+        <br>
+        <h2>Inspiration: Looking strong in front of your coworkers</h2>
+        <p>
+            Losing sucks. Losing as a result of an unfairly ruled competition sucks even more.
+        </p>
+        <p>
+            I am currently an electrical assembly technician, so we scrap a ton of wire. One day,
+            as I was talking to my lead, I randomly picked up the bin we used for scrap wire and
+            held it in front of me, arm straight and parallel to the ground. An exciting idea
+            struck my lead: create a leaderboard to see how long each person can hold the bin in
+            front of themselves.
+        </p>
+        <p>
+            I attached wires to both handles and put a metal pole through the wires so that it
+            would be more comfortable to hold it:
+        </p>
+        <img src="./assets/binDrawing.jpeg" id="binDrawingImg" src="Drawing of metal bar tied horisontally to a garbage bin using wires.">
+        <p>
+            Most of us held the bin straight in front of us, parallel to the ground. However, I
+            began to see some people drop their arm really low and still continue the attempt. We
+            tried to come up with a justice system to ensure that the competition was fair, but
+            there were still disagreements on whether a person dropped their arm too low.
+        </p>
+        <p>
+            Then one day, I came in to work to see that the previous record was beat by a 
+            Cross-Fitter from our office (alledgedly also the strongest guy in the comapny). My lead
+            claimed that the fine individual held his arm straight, but I was still motivated to
+            implement a system that would serve all of us justice.
+        </p>
+
+        <br>
+        <h2>Project Overview</h2>
+        <h3>Components</h3>
+        <p>
+            The physical system consists of:
+            <ul>
+                <li>an
+                    <a href="https://www.amazon.com/dp/B0C8H6ZGRR?ref=ppx_yo2ov_dt_b_fed_asin_title&th=1">
+                        ESP32 NodeMCU-32S Microcontroller</a>
+                </li>
+                <li>
+                    two
+                    <a href="https://www.amazon.com/dp/B0BXH9B6X1?ref=ppx_yo2ov_dt_b_fed_asin_title&th=1">
+                        angle sensor modules</a>
+                </li>
+                <li>
+                    wire
+                </li>
+            </ul>
+        </p>
+        <div>
+            <img src="./assets/microcontroller.jpeg" id="microcontrollerImg" alt="An ESP32 microcontroller connected to wires.">
+            <img src="./assets/angleSensor.jpeg" id="angleSensorImg" alt="A small angle sensor module.">
+        </div>
+        <h3>Converting the angle sensors into levels</h3>
+        <p>
+            The biggest problem I had was finding level modules that a microcontroller could read.
+            My only solution was to use angle sensor modules and attach 3-D printed levers to them.
+            Gravity pulls the lever down, rotating angle sensor rotor. I also attached a few pennies
+            to the end of the lever; this weight really helps the lever stay pointing down.
+        </p>
+        <div>
+            <img src="./assets/lever.jpeg" id="leverImg" alt="An angle sensor module with a plastic lever attached to the rotor.">
+            <img src="./assets/leverDown.jpeg" id="leverDownImg" alt="Angle sensor with lever hanging down.">
+        </div>
+        <h3>Making the levels arm-attachable</h3>
+        <p>
+            The final step for the level sensors was to modify them in a way to make it
+            easy to attach them to the arm. I found that D-ring belts worked very well for this.
+        </p>
+        <img src="./assets/level.jpeg" id="levelImg" alt="Angle sensor level in a plastic container.">
+        <h3>Programming the microcontroller</h3>
+        <p>
+            I programmed the microcontroller to read the output values of the angle sensors and store
+            them. This process is repeated 20 times per second. I programmed the microcontroller to
+            have two endpoints that send the recorded sensor values: one for the upper arm angle, and
+            one for the lower arm angle. Devices that are connected to the microcontroller through WiFi
+            can send requests to these endpoints and receive the angle sensor values.
+        </p>
+    </body>
+</html>
