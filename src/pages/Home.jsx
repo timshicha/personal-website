@@ -13,7 +13,7 @@ const Home = () => {
             <Navbar></Navbar>
             <div className="grid grid-cols-4 p-5 rounded-lg gap-5 bg-gray-300 m-5">
                 <main className="col-span-3 bg-gray-300">
-                    <div className="w-1/2 max-w-[200px] float-left mr-5 mb-3">
+                    <div className="w-1/2 max-w-[300px] float-left mr-5 mb-3">
                         <img src={havilahPhoto}></img>
                         <p className="text-[11px] font-bold text-gray-500 mt-2">Myself holding artwork of my stereotypes, thoughtfully created by my cousin.</p>
                     </div>
@@ -49,7 +49,7 @@ const Home = () => {
                     <h1 className="font-bold mb-1">The Golden Prison</h1>
                     <div className="w-1/2 max-w-[200px] float-right ml-5 mb-3">
                         <img src={binChallenge}></img>
-                        <p className="text-[11px] font-bold text-gray-500 mt-2">A competition at work involved holding a bin with an extended arm. This challenge inspired me to build a system to help my boss judge participants fairly.</p>
+                        <p className="text-[11px] font-bold text-gray-500 mt-2">A competition at my previous job involved holding a bin with an extended arm. This challenge inspired me to build a system to help my boss judge participants fairly.</p>
                     </div>
                     <p className="mb-5">
                         I didn't know how long it would take to find a job in software engineering, so I got a job assembling panels at Cascade Controls in Troutdale, OR. Working there inspired me to build two tech projects. The
@@ -58,8 +58,81 @@ const Home = () => {
                         searching for a job in my home field.
                     </p>
                 </main>
-                <aside className="bg-gray-300">
-                    
+                <aside className="bg-gray-300 border-l border-gray-600 p-4 text-[13px] text-gray-600">
+                    {/* EDUCATION */}
+                    <div className="mb-[70px]">
+                        <p className="font-bold text-black text-[15px] mb-2">Education</p>
+                        <p className="font-bold">
+                            B.S. Computer Science  
+                        </p>
+                        <p className="ml-2">
+                            <i className="text-blue-600">
+                            Portland State University
+                            <br/>
+                            2019-2023
+                            </i>
+                        </p>
+                    </div>
+                    {/* ACCOMPLISHMENTS */}
+                    <div className="mb-[70px]">
+                        <p className="font-bold text-black text-[15px] mb-2">Notable Scores</p>
+                        <p className="font-bold">
+                            SAT: 1280  
+                        </p>
+                        <p className="ml-2 mb-2">
+                            <i className="text-blue-600">
+                            Math: 730 (97th percentile)
+                            <br/>
+                            Reading: 550: (65th percentile)
+                            </i>
+                        </p>
+                        <p className="font-bold">
+                            AP Statistics Exam: 5/5
+                        </p>
+                    </div>
+                    {/* PREVIOUS WORK */}
+                    <div className="mb-[70px]">
+                        <p className="font-bold text-black text-[15px] mb-2">Previous Job</p>
+                        <p className="font-bold">
+                            Electrical Assembly Technician
+                        </p>
+                        <p className="ml-2">
+                            <i className="text-blue-600">
+                            Cascade Controls, Inc.
+                            <br/>
+                            Feb 2024 - Jun 2025
+                            </i>
+                        </p>
+                    </div>
+                    {/* PREVIOUS WORK */}
+                    <div className="mb-[70px]">
+                        <p className="font-bold text-black text-[15px] mb-2">Technical Skills</p>
+                        <p className="ml-2">
+                            <i className="text-blue-600">
+                                <ul className="list-disc ml-4">
+                                    <li>ReactJS, TailwindCSS</li>
+                                    <li>NodeJS, ExpressJS</li>
+                                    <li>C++, Python, and other languages</li>
+                                    <li>PostgreSQL, NoSQL, MongoDB</li>
+                                    <li>Command line, VIM</li>
+                                    <li>GCP (Cloud Run, Google Auth, and more)</li>
+                                    <li>Docker</li>
+                                    <li>Problem solving</li>
+                                    <li>Object Oriented Programming</li>
+                                </ul>
+                            </i>
+                        </p>
+                        <p className="font-bold text-black text-[15px] mb-2 mt-2">Soft Skills</p>
+                        <p className="ml-2">
+                            <i className="text-blue-600">
+                                <ul className="list-disc ml-4">
+                                    <li>Great communication</li>
+                                    <li>Excellent at working with others</li>
+                                    <li>Rapidly learn new things</li>
+                                </ul>
+                            </i>
+                        </p>
+                    </div>
                 </aside>
             </div>
         </>
