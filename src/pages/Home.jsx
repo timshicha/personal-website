@@ -1,6 +1,8 @@
 import React from "react";
 import Navbar from "../components/Navbar";
 import havilahPhoto from "../assets/images/havilah-photo.png";
+import ti83pythagorean from "../assets/images/ti-83-pythagorean.png";
+import binChallenge from "../assets/images/bin-challenge.png";
 
 const Home = () => {
 
@@ -11,11 +13,19 @@ const Home = () => {
             <Navbar></Navbar>
             <div className="grid grid-cols-4 p-5 rounded-lg gap-5 bg-gray-300 m-5">
                 <main className="col-span-3 bg-gray-300">
-                    <img src={havilahPhoto} className="w-1/2 max-w-[200px] float-left mr-5 mb-3"></img>
+                    <div className="w-1/2 max-w-[200px] float-left mr-5 mb-3">
+                        <img src={havilahPhoto}></img>
+                        <p className="text-[11px] font-bold text-gray-500 mt-2">Myself holding artwork of my stereotypes, thoughtfully created by my cousin.</p>
+                    </div>
                     <p className="mb-5">I'm Tim. I solve problems, and I am here to solve yours next.</p>
                     <h1 className="font-bold mb-1">15 Second About Me</h1>
                     <p className="mb-5">I am 24 years old, and I graduated from Portland State University in 2023 with a Bachelors in Computer Science. I have since worked as a panel technician at Cascade Controls, and in the meantime worked on a couple tech projects. I am seeking a job in tech, preferably in software engineering or web development.</p>
                     <h1 className="font-bold mb-1">Programming on a TI-83 Calculator</h1>
+                    <div className="w-1/2 max-w-[200px] float-right mb-3 ml-5">
+                        <img src={ti83pythagorean}></img>
+                        <p className="text-[11px] font-bold text-gray-500 mt-2">The TI-83 that I first learned to program on.</p>
+
+                    </div>
                     <p className="mb-5">
                         The first program I wrote wasn't on a computer. For my sophomore year of high school, I took the AP Statistics class, where we had to use the invT function on our TI-84 calculators.
                         Unlike everyone else, I had a TI-83, so I didn't have the function. When I got home, I went online to figure out if there was a workaround, and that's when I discovered the world of programming.
@@ -37,6 +47,10 @@ const Home = () => {
                         is no longer sunshines and rainbows. It's a brutal war in which almost everyone is losing.
                     </p>
                     <h1 className="font-bold mb-1">The Golden Prison</h1>
+                    <div className="w-1/2 max-w-[200px] float-right ml-5 mb-3">
+                        <img src={binChallenge}></img>
+                        <p className="text-[11px] font-bold text-gray-500 mt-2">A competition at work involved holding a bin with an extended arm. This challenge inspired me to build a system to help my boss judge participants fairly.</p>
+                    </div>
                     <p className="mb-5">
                         I didn't know how long it would take to find a job in software engineering, so I got a job assembling panels at Cascade Controls in Troutdale, OR. Working there inspired me to build two tech projects. The
                         first one was pretty simple, but the second one I took more seriously. I spent most of my time after work building this app, and I really wanted to put even more time into it. That's when I seriously realized
@@ -45,7 +59,7 @@ const Home = () => {
                     </p>
                 </main>
                 <aside className="bg-gray-300">
-                    hey
+                    
                 </aside>
             </div>
         </>
