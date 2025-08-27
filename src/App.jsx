@@ -1,13 +1,15 @@
 import React from "react";
-import Navbar from "./components/Navbar";
+import { Routes, Route, Link } from "react-router-dom";
 import Home from "./pages/Home";
+import Projects from "./pages/Projects";
 
 const App = () => {
 
     return (
-        <>
-            <Home></Home>
-        </>
+        <Routes>
+            <Route path="/" element={<Home />}/>
+            <Route path="/projects" element={<Projects />}/>
+        </Routes>
     );
 }
 

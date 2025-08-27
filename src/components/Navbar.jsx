@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -11,10 +12,8 @@ const Navbar = () => {
 
                 {/* Desktop Links */}
                 <div className="space-x-6 hidden md:flex">
-                    <a href="#" className="text-white hover:text-gray-400">Home</a>
-                    <a href="#" className="text-white hover:text-gray-400">About</a>
-                    <a href="#" className="text-white hover:text-gray-400">Services</a>
-                    <a href="#" className="text-white hover:text-gray-400">Contact</a>
+                    <Link to="/" className="text-white hover:text-gray-400">Home</Link>
+                    <Link to="/projects" className="text-white hover:text-gray-400">Projects</Link>
                 </div>
 
                 {/* Mobile Menu Button */}
@@ -29,10 +28,8 @@ const Navbar = () => {
             {/* Mobile Dropdown */}
             {isOpen && (
                 <div className="flex flex-col mt-3 space-y-2 md:hidden">
-                    <a href="#" className="text-white hover:text-gray-400 py-1">Home</a>
-                    <a href="#" className="text-white hover:text-gray-400 py-1">About</a>
-                    <a href="#" className="text-white hover:text-gray-400 py-1">Services</a>
-                    <a href="#" className="text-white hover:text-gray-400 py-1">Contact</a>
+                    <Link to="/" className="text-white hover:text-gray-400 py-1">Home</Link>
+                    <Link to="/projects" className="text-white hover:text-gray-400 py-1">Projects</Link>
                 </div>
             )}
         </nav>
