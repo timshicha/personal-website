@@ -8,17 +8,17 @@ const Navbar = () => {
         <nav className="bg-black shadow-md p-3 bg-black">
             <div className="flex justify-between items-center">
                 {/* Logo */}
-                <div className="text-2xl font-bold text-white">Tim's Hub</div>
+                <Link to="/" className="text-2xl font-bold text-white">TS</Link>
 
                 {/* Desktop Links */}
-                <div className="space-x-6 hidden md:flex">
+                <div className="space-x-6 hidden sm:flex">
                     <Link to="/" className="text-white hover:text-gray-400">Home</Link>
                     <Link to="/projects" className="text-white hover:text-gray-400">Projects</Link>
                 </div>
 
                 {/* Mobile Menu Button */}
                 <button
-                    className="md:hidden text-white hover:text-gray-400 text-2xl"
+                    className="sm:hidden text-white hover:text-gray-400 text-2xl"
                     onClick={() => setIsOpen(!isOpen)}
                 >
                     {isOpen ? "✕" : "☰"}
@@ -27,7 +27,7 @@ const Navbar = () => {
 
             {/* Mobile Dropdown */}
             {isOpen && (
-                <div className="flex flex-col mt-3 space-y-2 md:hidden">
+                <div className="flex flex-col mt-3 space-y-2 sm:hidden">
                     <Link to="/" className="text-white hover:text-gray-400 py-1">Home</Link>
                     <Link to="/projects" className="text-white hover:text-gray-400 py-1">Projects</Link>
                 </div>
