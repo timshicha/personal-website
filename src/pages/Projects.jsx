@@ -47,19 +47,17 @@ const BogeyPad = () => {
                     currentImage === 1 ? bogeyPadRoundsImg :
                     bogeyPadProfileImg
                 }></img>
+                <PreviousImageButton onClick={previousImage} className="align-middle float-left"></PreviousImageButton>
+                <NextImageButton onClick={nextImage} className="align-middle float-right"></NextImageButton>
                 <div className="text-center mt-2">
                     {Array(IMAGES).fill().map((value, index) => {
                         if(index === currentImage) {
-                            return <SolidDot></SolidDot>
+                            return <SolidDot onClick={() => {setCurrentImage(index)}} className="cursor-pointer align-middle"></SolidDot>
                         }
                         else {
-                            return <EmptyDot></EmptyDot>
+                            return <EmptyDot onClick={() => {setCurrentImage(index)}} className="cursor-pointer align-middle"></EmptyDot>
                         }
                     })}
-                </div>
-                <div className="text-center">
-                    <PreviousImageButton onClick={previousImage} className="mx-5"></PreviousImageButton>
-                    <NextImageButton onClick={nextImage} className="mx-5"></NextImageButton>
                 </div>
             </div>
         </div>
