@@ -2,6 +2,7 @@ import React from "react";
 import Navbar from "../components/Navbar";
 import havilahPhoto from "../assets/images/havilah-photo.png";
 import ti83pythagorean from "../assets/images/ti-83-pythagorean.png";
+import binChallenge from "../assets/images/bin-challenge/holdingBin.jpeg";
 
 const Home = () => {
 
