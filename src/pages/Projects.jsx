@@ -4,17 +4,26 @@ import Navbar from "../components/Navbar";
 import bogeyPadCoursesImg from "../assets/images/bogey-pad/courses.jpeg";
 import bogeyPadRoundsImg from "../assets/images/bogey-pad/rounds.jpeg";
 import bogeyPadProfileImg from "../assets/images/bogey-pad/profile.jpeg";
+import angleSensor from "../assets/images/bin-challenge/angleSensor.jpeg";
+import binDrawing from "../assets/images/bin-challenge/binDrawing.jpeg";
+import esp32system from "../assets/images/bin-challenge/esp32system.jpeg";
+import holdingBin from "../assets/images/bin-challenge/holdingBin.jpeg";
+import level from "../assets/images/bin-challenge/level.jpeg";
+import lever from "../assets/images/bin-challenge/lever.jpeg";
+import leverDown from "../assets/images/bin-challenge/leverDown.jpeg";
+import microcontroller from "../assets/images/bin-challenge/microcontroller.jpeg";
+import binAppScreenshot from "../assets/images/bin-challenge/binAppScreenshot.jpeg";
 import { NextImageButton, PreviousImageButton } from "../components/Buttons";
 import { EmptyDot, SolidDot } from "../components/Dots";
 
 const BogeyPad = () => {
 
-    const IMAGES = 3;
+    const IMAGES = [bogeyPadRoundsImg, bogeyPadCoursesImg, bogeyPadProfileImg];
     const [currentImage, setCurrentImage] = useState(0);
 
     const nextImage = () => {
         let newCurrentImage = currentImage + 1;
-        if(newCurrentImage >= IMAGES) {
+        if(newCurrentImage >= IMAGES.length) {
             newCurrentImage = 0;
         }
         setCurrentImage(newCurrentImage);
@@ -23,7 +32,7 @@ const BogeyPad = () => {
     const previousImage = () => {
         let newCurrentImage = currentImage - 1;
         if(newCurrentImage < 0) {
-            newCurrentImage = IMAGES - 1;
+            newCurrentImage = IMAGES.length - 1;
         }
         setCurrentImage(newCurrentImage);
     }
@@ -57,15 +66,13 @@ const BogeyPad = () => {
 
                 </div>
                 <div className="">
-                    <img src={
-                        currentImage === 0 ? bogeyPadRoundsImg :
-                        currentImage === 1 ? bogeyPadCoursesImg :
-                        bogeyPadProfileImg
-                    }></img>
+                    <div className="h-[400px]">
+                        <img src={IMAGES[currentImage]} className="max-h-[400px] mx-auto"></img>
+                    </div>
                     <PreviousImageButton onClick={previousImage} className="align-middle float-left"></PreviousImageButton>
                     <NextImageButton onClick={nextImage} className="align-middle float-right"></NextImageButton>
                     <div className="text-center mt-2">
-                        {Array(IMAGES).fill().map((value, index) => {
+                        {Array(IMAGES.length).fill().map((value, index) => {
                             if(index === currentImage) {
                                 return <SolidDot onClick={() => {setCurrentImage(index)}} className="cursor-pointer align-middle"></SolidDot>
                             }
@@ -82,8 +89,87 @@ const BogeyPad = () => {
         </div>
     );
 }
-const Projects = () => {
 
+const BinChallengeSystem = () => {
+
+    const IMAGES = [
+        angleSensor,
+        binAppScreenshot,
+        binDrawing,
+        esp32system,
+        holdingBin,
+        level,
+        lever,
+        leverDown,
+        microcontroller
+    ];
+    const [currentImage, setCurrentImage] = useState(0);
+
+    const nextImage = () => {
+        let newCurrentImage = currentImage + 1;
+        if(newCurrentImage >= IMAGES.length) {
+            newCurrentImage = 0;
+        }
+        setCurrentImage(newCurrentImage);
+    }
+
+    const previousImage = () => {
+        let newCurrentImage = currentImage - 1;
+        if(newCurrentImage < 0) {
+            newCurrentImage = IMAGES.length - 1;
+        }
+        setCurrentImage(newCurrentImage);
+    }
+
+    return (
+        <div className="rounded-lg bg-gray-300 m-5 px-5 py-3">
+            <div className="grid grid-cols-3 rounded-lg mb-3 gap-5">
+                <div className="col-span-2">
+                    <h2 className="font-bold text-[20px]">Bin Challenge System</h2>
+                    <p><i className="text-[13px]">
+                        iPhone app and physical system using an ESP microcontroller to tracking arm angles
+                    </i></p>
+                    <div className="text-black my-2">
+                        <ul className="list-disc ml-5">
+                            <li>App written in Swift (XCode)</li>
+                            <li>ESP32 microcontroller for physical system</li>
+                            <li>Angle sensors to measure angles</li>
+                        </ul>
+                    </div>
+                    <p className="mb-5"><i className="text-[13px]">
+                        
+                    </i></p>
+                    <a href="https://github.com/timshicha/Bin-Challenge.swiftpm" className="underline text-blue-600">View GitHub repository</a>
+
+                </div>
+                <div className="">
+                    <div className="h-[400px]">
+                        <img src={IMAGES[currentImage]} className="max-h-[400px] mx-auto"></img>
+                    </div>
+                    <PreviousImageButton onClick={previousImage} className="align-middle float-left"></PreviousImageButton>
+                    <NextImageButton onClick={nextImage} className="align-middle float-right"></NextImageButton>
+                    <div className="text-center mt-2">
+                        {Array(IMAGES.length).fill().map((value, index) => {
+                            if(index === currentImage) {
+                                return <SolidDot onClick={() => {setCurrentImage(index)}} className="cursor-pointer align-middle"></SolidDot>
+                            }
+                            else {
+                                return <EmptyDot onClick={() => {setCurrentImage(index)}} className="cursor-pointer align-middle"></EmptyDot>
+                            }
+                        })}
+                    </div>
+                </div>
+            </div>
+            <div className="text-center">
+                <Link to="/projects/bin-challenge-system"><u className="text-gray-600">See More</u></Link>
+            </div>
+        </div>
+    );
+}
+
+
+
+const Projects = () => {
 
     return (
         <>
@@ -92,6 +178,7 @@ const Projects = () => {
                 <h1 className="font-bold text-[30px]">Projects</h1>
             </div>
             <BogeyPad></BogeyPad>
+            <BinChallengeSystem></BinChallengeSystem>
         </>
     );
 
