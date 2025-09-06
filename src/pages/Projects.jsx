@@ -93,15 +93,15 @@ const BogeyPad = () => {
 const BinChallengeSystem = () => {
 
     const IMAGES = [
-        angleSensor,
         binAppScreenshot,
-        binDrawing,
-        esp32system,
-        holdingBin,
         level,
         lever,
         leverDown,
-        microcontroller
+        microcontroller,
+        angleSensor,
+        binDrawing,
+        esp32system,
+        holdingBin,
     ];
     const [currentImage, setCurrentImage] = useState(0);
 
@@ -137,10 +137,12 @@ const BinChallengeSystem = () => {
                         </ul>
                     </div>
                     <p className="mb-5"><i className="text-[13px]">
-                        
+                        This was a solo project I built in March 2025. To ensure fair scoring at a challenge at
+                        my previous job, I created a system that tracks a person's arm angle. The iPhone app
+                        tracks how long someone's arm stays within a certain angle and stops the timer when the
+                        arm is lowered or raised too high.
                     </i></p>
                     <a href="https://github.com/timshicha/Bin-Challenge.swiftpm" className="underline text-blue-600">View GitHub repository</a>
-
                 </div>
                 <div className="">
                     <div className="h-[400px]">
