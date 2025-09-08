@@ -25,6 +25,15 @@ const BinChallengeSystemPage = () => {
                     to ensure integrity. Competitors would attach the system to their arm, and then the
                     timer in the app would run until the arm was dropped below a specified threshold.
                 </p>
+                <h2 className="font-bold text-[18px] mt-5">Evolution</h2>
+                <p>
+                    This project started with a lot of planning on how to build the physical system, and
+                    once that was done, the focus was simply building an app that projected the angles of
+                    the upper and lower arm. Then, I added a few more things to make the app convenient.
+                    I added a timer and allowed the user to enter an angle at which to stop the timer. The
+                    process became simple: put on the device, hold the arm straigh, zero the device through
+                    the app, and start.
+                </p>
             </div>
         </>
     );
