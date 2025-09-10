@@ -10,9 +10,17 @@ const Home = () => {
 
     // For fading things in when the page loads
     const [visible, setVisible] = useState(false);
+    const [visible0_25seconds, setVisible0_25seconds] = useState(false);
+    const [visible0_5seconds, setVisible0_5seconds] = useState(false);
+    const [visible0_75seconds, setVisible0_75seconds] = useState(false);
+    const [visible1seconds, setVisible1seconds] = useState(false);
 
     useEffect(() => {
         setVisible(true);
+        setTimeout(() => setVisible0_25seconds(true), 250);
+        setTimeout(() => setVisible0_5seconds(true), 500);
+        setTimeout(() => setVisible0_75seconds(true), 750);
+        setTimeout(() => setVisible1seconds(true), 1000);
     }, []);
 
     return (
@@ -35,30 +43,39 @@ const Home = () => {
             </div>
             
             <div className="grid grid-cols-3 m-3 gap-3">
-                <a href="https://bogeypad.com" target="_blank" className="transition-transform hover:scale-[95%] bg-gray-500 text-white font-georgia p-10 text-[25px]">
-                    <div className="text-center">
-                        <img className="w-1/4 inline align-middle" src={bogeyPadAppIcon} alt="Bogey Pad App Icon"></img>
-                        <div className="inline align-middle ml-5">
-                            Launch my web app
+                <div className="hover:scale-95 transition-transform duration-300">
+                    <a href="https://bogeypad.com" target="_blank" className={`block h-full bg-gray-500 transition-opacity duration-[2s] text-white font-georgia p-10 text-[25px]
+                        ${visible0_25seconds ? 'opacity-100' : 'opacity-0'}`}>
+                        <div className="text-center">
+                            <img className="w-1/4 inline align-middle" src={bogeyPadAppIcon} alt="Bogey Pad App Icon"></img>
+                            <div className="inline align-middle ml-5">
+                                Launch my web app
+                            </div>
                         </div>
-                    </div>
-                </a>
-                <a href="https://github.com/timshicha" target="_blank" className="transition-transform hover:scale-[95%] bg-gray-500 text-white font-georgia p-10 text-[25px]">
-                    <div className="text-center">
-                        <img className="w-1/4 inline align-middle bg-gray-800 rounded-[100%]" src={githubIcon} alt="Bogey Pad App Icon"></img>
-                        <div className="inline align-middle ml-5">
-                            View my GitHub
+                    </a>
+                </div>
+                <div className="hover:scale-95 transition-transform duration-300">
+                    <a href="https://github.com/timshicha" target="_blank" className={`block h-full bg-gray-500 transition-opacity duration-[2s] text-white font-georgia p-10 text-[25px]
+                        ${visible0_5seconds ? 'opacity-100' : 'opacity-0'}`}>
+                        <div className="text-center">
+                            <img className="w-1/4 inline align-middle bg-gray-800 rounded-[100%]" src={githubIcon} alt="Bogey Pad App Icon"></img>
+                            <div className="inline align-middle ml-5">
+                                View my GitHub
+                            </div>
                         </div>
-                    </div>
-                </a>
-                <a href="https://linkedin.com/in/timshicha" target="_blank" className="transition-transform hover:scale-[95%] bg-gray-500 text-white font-georgia p-10 text-[25px]">
-                    <div className="text-center">
-                        {/* <img className="w-1/4 inline align-middle bg-white" src={linkedInIcon} alt="Bogey Pad App Icon"></img> */}
-                        <div className="inline align-middle ml-5">
-                            View my LinkedIn
+                    </a>
+                </div>
+                <div className="hover:scale-95 transition-transform duration-300">
+                    <a href="https://linkedin.com/in/timshicha" target="_blank" className={`block h-full bg-gray-500 transition-opacity duration-[2s] text-white font-georgia p-10 text-[25px]
+                        ${visible0_75seconds ? 'opacity-100' : 'opacity-0'}`}>
+                        <div className="text-center">
+                            {/* <img className="w-1/4 inline align-middle bg-white" src={linkedInIcon} alt="Bogey Pad App Icon"></img> */}
+                            <div className="inline align-middle ml-5">
+                                View my LinkedIn
+                            </div>
                         </div>
-                    </div>
-                </a>
+                    </a>
+                </div>
             </div>
 
             <div className="w-full bg-gray-200 p-10 text-[20px] font-georgia">
