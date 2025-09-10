@@ -4,7 +4,6 @@ import Navbar from "../components/Navbar";
 import headshot from "../assets/images/powell-butte.jpeg";
 import bogeyPadAppIcon from "../assets/images/bogey-pad/appIcon512.png";
 import githubIcon from "../assets/images/github-mark-white.png";
-import linkedInIcon from "../assets/images/linkedInLogo.png";
 
 const Home = () => {
 
@@ -17,10 +16,10 @@ const Home = () => {
 
     useEffect(() => {
         setVisible(true);
-        setTimeout(() => setVisible0_25seconds(true), 250);
-        setTimeout(() => setVisible0_5seconds(true), 500);
-        setTimeout(() => setVisible0_75seconds(true), 750);
-        setTimeout(() => setVisible1seconds(true), 1000);
+        setTimeout(() => setVisible0_25seconds(true), 50);
+        setTimeout(() => setVisible0_5seconds(true), 100);
+        setTimeout(() => setVisible0_75seconds(true), 150);
+        setTimeout(() => setVisible1seconds(true), 200);
     }, []);
 
     return (
@@ -38,7 +37,9 @@ const Home = () => {
                         "I have been consistently impressed with Tim's ability and productivity during the time that he has worked for our company."
                     </p>
                     <p className="mt-10">- Mike, Department Lead at Cascade Controls Inc.</p>
-                    <p className="mt-10 text-center">See full reference</p>
+                    <a href="/mike-letter.pdf" target="_blank" className="underline">
+                        <p className="mt-10 text-center">See full reference</p>
+                    </a>
                 </div>
             </div>
             
@@ -78,7 +79,8 @@ const Home = () => {
                 </div>
             </div>
 
-            <div className="w-full bg-gray-200 p-10 text-[20px] font-georgia">
+            <div className={`w-full bg-gray-200 p-10 text-[20px] font-georgia
+                transition-opacity duration-[2s] ${visible1seconds ? 'opacity-100' : 'opacity-0'}`}>
                 <p>
                     Do you want a junior developer that's aware of how things break when apps are pushed to production?
                     More importantly, do you want a developer that knows how to fix those issues?
@@ -132,7 +134,24 @@ const Home = () => {
                         </p>
                     </div>
                 </div>
-                
+            </div>
+
+            <div className="grid grid-cols-2 bg-gray-600 text-white text-[15px] p-10 font-georgia">
+                <div>
+                    <p className="text-[25px]">Education</p>
+                    <div className="ml-7 border-l border-white pl-3">
+                        <p className="my-2">B.S. Computer Science</p>
+                        <p className="my-2">Portland State University (2019-2023)</p>
+                        <p className="my-2">3.99 GPA</p>
+                    </div>
+                </div>
+                <div>
+                    <p className="text-[25px]">Work Experience</p>
+                    <div className="ml-7 border-l border-white pl-3">
+                        <p className="my-2">Electrical Assembly Technician</p>
+                        <p className="my-2">Cascade Controls Inc. (Feb 2023 - Jun 2024)</p>
+                    </div>
+                </div>
             </div>
         </>
     );

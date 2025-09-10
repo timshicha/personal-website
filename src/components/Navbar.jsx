@@ -6,7 +6,7 @@ const Navbar = () => {
 
     return (
         <>
-        <nav className="bg-black shadow-md p-3 bg-black fixed w-full">
+        <nav className="bg-black shadow-md p-3 bg-black fixed w-full font-georgia text-xl">
             <div className="flex justify-between items-center">
                 {/* Logo */}
                 <Link to="/" className="text-2xl font-bold text-white">Timofey Shichalin</Link>
