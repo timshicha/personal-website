@@ -37,9 +37,11 @@ const Home = () => {
                         "I have been consistently impressed with Tim's ability and productivity during the time that he has worked for our company."
                     </p>
                     <p className="mt-10">- Mike, Department Lead at Cascade Controls Inc.</p>
-                    <a href="/mike-letter.pdf" target="_blank" className="underline">
-                        <p className="mt-10 text-center">See full reference</p>
-                    </a>
+                    <div className="text-center mt-10">
+                        <a href="/mike-letter.pdf" target="_blank" className="underline">
+                            See full reference
+                        </a>
+                    </div>
                 </div>
             </div>
             
