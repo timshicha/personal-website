@@ -5,7 +5,11 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {}
+    extend: {
+      fontFamily: {
+        georgia: ['Georgia', 'ui-serif', 'Georgia', 'Cambria', '"Times New Roman"', 'Times', 'serif'],
+      },
+    }
   },
   plugins: [],
 }

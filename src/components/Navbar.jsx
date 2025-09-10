@@ -5,10 +5,11 @@ const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
 
     return (
-        <nav className="bg-black shadow-md p-3 bg-black">
+        <>
+        <nav className="bg-black shadow-md p-3 bg-black fixed w-full">
             <div className="flex justify-between items-center">
                 {/* Logo */}
-                <Link to="/" className="text-2xl font-bold text-white">TS</Link>
+                <Link to="/" className="text-2xl font-bold text-white">Timofey Shichalin</Link>
 
                 {/* Desktop Links */}
                 <div className="space-x-6 hidden sm:flex">
@@ -33,6 +34,9 @@ const Navbar = () => {
                 </div>
             )}
         </nav>
+        {/* Spacer to make navbar take up space */}
+        <div className="h-[50px]"></div>
+        </>
     );
 }
 
