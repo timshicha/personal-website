@@ -33,6 +33,20 @@ const BogeyPadPage = () => {
                     <li>Add friends to view private profiles</li>
                     <li>Easily merge local data with cloud data (or choose which to keep)</li>
                 </ul>
+                <hr className="my-10"></hr>
+                <p className="mt-6">Why Bogey Pad is superior (even to UDisc):</p>
+                <ul className="list-disc ml-7 mt-1">
+                    <li>0 setup</li>
+                    <li>Create account only when you want to start saving to cloud</li>
+                    <li>No sluggish performance</li>
+                    <li>Ridiculously easy to navigate:</li>
+                    <ul className="list-circle ml-7">
+                        <li>Find any course or round in 3 seconds</li>
+                        <li>Edit any round at any point instantly</li>
+                        <li>Minimal clicking required: each click has a purpose</li>
+                    </ul>
+                    <li>Searching for users is very fast</li>
+                </ul>
             </div>
         </div>
     );
