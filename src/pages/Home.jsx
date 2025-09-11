@@ -69,10 +69,9 @@ const Home = () => {
                     </a>
                 </div>
                 <div className="hover:scale-95 transition-transform duration-300">
-                    <a href="https://linkedin.com/in/timshicha" target="_blank" className={`block h-full bg-gray-500 transition-opacity duration-[2s] text-white font-georgia p-10 text-[25px]
+                    <a href="https://www.linkedin.com/in/shichatim/" target="_blank" className={`block h-full bg-gray-500 transition-opacity duration-[2s] text-white font-georgia p-10 text-[25px]
                         ${visible0_75seconds ? 'opacity-100' : 'opacity-0'}`}>
                         <div className="text-center">
-                            {/* <img className="w-1/4 inline align-middle bg-white" src={linkedInIcon} alt="Bogey Pad App Icon"></img> */}
                             <div className="inline align-middle ml-5">
                                 View my LinkedIn
                             </div>
