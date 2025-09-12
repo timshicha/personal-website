@@ -7,35 +7,34 @@ const BinChallengeSystemPage = () => {
 
 
     return (
-        <>
+        <div className="bg-gray-200">
             <Navbar></Navbar>
-            <div className="rounded-lg bg-gray-300 m-5 px-5 py-3 pb-[100px]">
-                <h1 className="text-[25px] font-bold text-center">Bin Challenge</h1>
-                <h2 className="font-bold text-[18px]">Summary</h2>
-                <p>
-                    Want to see your arm position displayed on a screen? Attach this system to your
-                    arm and connect to the iPhone app to see the current angle of your arm.
-                </p>
-                <h2 className="font-bold text-[18px] mt-5">Insiration</h2>
-                <p>
-                    I don't like losing. What's worse is when you lose and you know that the other
-                    person cheated. This is what was happening at my job. We had a challenge to see
-                    who could hold a bin with their outstretched arm the longest. But I began to realize
-                    that many people were dropping their arm but still "going". So I created a system
-                    to ensure integrity. Competitors would attach the system to their arm, and then the
-                    timer in the app would run until the arm was dropped below a specified threshold.
-                </p>
-                <h2 className="font-bold text-[18px] mt-5">Evolution</h2>
-                <p>
-                    This project started with a lot of planning on how to build the physical system, and
-                    once that was done, the focus was simply building an app that projected the angles of
-                    the upper and lower arm. Then, I added a few more things to make the app convenient.
-                    I added a timer and allowed the user to enter an angle at which to stop the timer. The
-                    process became simple: put on the device, hold the arm straigh, zero the device through
-                    the app, and start.
-                </p>
+            <div className="bg-gray-800 text-white text-center p-5 text-[40px] font-georgia">
+                Bin Challenge System
+                <p className="text-[15px] text-gray-400 mt-2">An ESP-32 microcontroller-power system with an iPhone app</p>
             </div>
-        </>
+            <div className="w-full bg-gray-700 text-white font-georgia text-[20px] p-10">
+                <div className="text-center text-black text-[20px] mb-10">
+                    <a href="https://github.com/timshicha/Bin-Challenge.swiftpm" target="_blank" className="inline-block p-5 bg-gray-300 transition duration-300 hover:scale-105 mx-4 w-[250px] text-center">View GitHub repository</a>
+                </div>
+                <p className="text-[25px] text-blue-300">Technology:</p>
+                <ul className="list-disc ml-7 mt-1">
+                    <li>ESP-32 microcontroller with angle sensors</li>
+                    <li>iPhone app: Swift</li>
+                </ul>
+                <p className="mt-6 text-[25px] text-blue-300">Basic description:</p>
+                <ul className="list-disc ml-7 mt-1">
+                    <li>Attach physical system onto arm</li>
+                    <li>See real-time angle on iPhone app</li>
+                </ul>
+                <p className="mt-6 text-[25px] text-blue-300">App features:</p>
+                <ul className="list-disc ml-7 mt-1">
+                    <li>Zero the angle sensors through the app</li>
+                    <li>See real-time visual arm position</li>
+                    <li>Automatically start and end timer while arm in legal position</li>
+                </ul>
+            </div>
+        </div>
     );
 }
 
