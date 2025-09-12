@@ -15,6 +15,7 @@ const Navbar = () => {
                 <div className="space-x-6 hidden sm:flex">
                     <Link to="/" className="text-white hover:text-gray-400">Home</Link>
                     <Link to="/projects" className="text-white hover:text-gray-400">Projects</Link>
+                    <Link to="/contact" className="text-white hover:text-gray-400">Contact</Link>
                 </div>
 
                 {/* Mobile Menu Button */}

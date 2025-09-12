@@ -11,7 +11,7 @@ const BinChallengeSystemPage = () => {
             <Navbar></Navbar>
             <div className="bg-gray-800 text-white text-center p-5 text-[40px] font-georgia">
                 Bin Challenge System
-                <p className="text-[15px] text-gray-400 mt-2">An ESP-32 microcontroller-power system with an iPhone app</p>
+                <p className="text-[15px] text-gray-400 mt-2">An ESP-32 microcontroller-powered system with an iPhone app</p>
             </div>
             <div className="w-full bg-gray-700 text-white font-georgia text-[20px] p-10">
                 <div className="text-center text-black text-[20px] mb-10">
