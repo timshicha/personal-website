@@ -5,6 +5,7 @@ import Projects from "./pages/Projects";
 import BogeyPadPage from "./pages/projects/BogeyPadPage";
 import BinChallengeSystemPage from "./pages/projects/BinChallengeSystem";
 import ContactPage from "./pages/Contact";
+import LogicGateSimulator from "./pages/projects/LogicGateSimulator";
 
 const App = () => {
 
@@ -14,6 +15,7 @@ const App = () => {
             <Route path="/projects" element={<Projects />}/>
             <Route path="/projects/bogey-pad" element={<BogeyPadPage />}/>
             <Route path="/projects/bin-challenge-system" element={<BinChallengeSystemPage />}/>
+            <Route path="/projects/logic-gate-simulator" element={<LogicGateSimulator />}/>
             <Route path="/contact" element={<ContactPage />}/>
         </Routes>
     );

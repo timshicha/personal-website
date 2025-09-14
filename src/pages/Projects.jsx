@@ -96,6 +96,32 @@ const Projects = () => {
                 </div>
 
             </div>
+
+            <div className="w-full bg-gray-600 mt-20 py-5">
+                <div className="max-w-[700px] mx-auto">
+                    <div className="text-center font-georgia font-bold text-[35px] text-white">Logic Gate Simulator</div>
+                    <div className="text-center text-gray-300 font-georgia">Webpage for building and simulating circuits with logic gates</div>
+                    <div className="grid grid-cols-3 gap-8 p-5 mx-auto">
+                        {/* Images */}
+                    </div>
+                    <div className="text-white font-georgia py-4 px-10">
+                        <p>
+                            I initially built this project in 2023 as part of my full-stack class final project. I really liked the app, so
+                            I later came back to make improve it and make it just a front-end app.
+                        </p>
+                        <p className="mt-5">
+                            Tech stack:
+                            <ul className="list-disc ml-7">
+                                <li>ReactJS + TailwindCSS</li>
+                            </ul>
+                        </p>
+                        <div className="mt-10 text-center">
+                            <Link to="/projects/logic-gate-simulator" className="inline-block p-5 bg-gray-800 transition duration-300 hover:scale-105 mx-2 w-[150px] text-center">More details</Link>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
         </div>
     );
 
