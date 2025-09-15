@@ -24,9 +24,15 @@ const LogicGateSimulator = () => {
                 </ul>
                 <p className="mt-6 text-[25px] text-blue-300">Basic description:</p>
                 <ul className="list-disc ml-7 mt-1">
-                    
+                    <li>Create multiple logic circuits</li>
+                    <li>Add wires and logic gates (AND, OR, NOT) to the circuit</li>
+                    <li>Flip input switches</li>
+                    <li>Circuit is propogated to one output</li>
                 </ul>
                 <p className="mt-6 text-[25px] text-blue-300">Features:</p>
+                    <li>Build as complex of a circuit as you want; it propogates correctly</li>
+                    <li>Undo/redo button</li>
+                    <li>Download circuit to a file to upload later</li>
                 <ul className="list-disc ml-7 mt-1">
                     
                 </ul>
