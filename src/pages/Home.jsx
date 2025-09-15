@@ -137,7 +137,19 @@ const Home = () => {
                 </div>
             </div>
 
-            <div className="grid grid-cols-2 bg-gray-600 text-white text-[15px] p-10 font-georgia">
+            <div className={`col-span-3 text-[30px] text-white p-10 font-georgia bg-gray-600 text-center
+                transition-opacity duration-[2s] ${visible ? 'opacity-100' : 'opacity-0'}`}>
+                <p className="">
+                    "Whatever you do, work heartily, as for the Lord and not for men."
+                </p>
+                <p className="mt-5 text-center">Colossians 3:23</p>
+            </div>
+
+            <div className="h-[10px] bg-gray-200">
+
+            </div>
+
+            <div className="grid grid-cols-2 text-white text-[15px] p-10 font-georgia">
                 <div>
                     <p className="text-[25px]">Education</p>
                     <div className="ml-7 border-l border-white pl-3">
@@ -154,6 +166,7 @@ const Home = () => {
                     </div>
                 </div>
             </div>
+
         </>
     );
 }
