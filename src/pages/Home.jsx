@@ -38,7 +38,7 @@ const Home = () => {
                     </p>
                     <p className="mt-10">- Mike, Department Lead at Cascade Controls Inc.</p>
                     <div className="text-center mt-10">
-                        <a href="/mike-letter.pdf" target="_blank" className="underline">
+                        <a href="/cascade-controls-mike-recommendation-letter.pdf" target="_blank" className="underline">
                             See full reference
                         </a>
                     </div>
